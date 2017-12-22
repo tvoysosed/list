@@ -229,61 +229,60 @@ if (argc > 1)
             }
          if (i == strlen(argv[1]) - 1)
          input(list, znachenie);
+         }
       }
-   }
-else
-   {
-   for (int i = 0; i < argc - 1; i++)
+   else
       {
-      znachenie = atoi(argv[i + 1]);
-      input(list, znachenie);
+      for (int i = 0; i < argc - 1; i++)
+         {
+         znachenie = atoi(argv[i + 1]);
+         input(list, znachenie);
+         }
       }
-   }
-string flag_exit = "no";
-while ((flag_exit != "y") && (flag_exit != "yes") && (flag_exit != "Yes") && (flag_exit != "YES"))
-   {
-   cout << endl;
-   cout << "Select one of the operations:" << endl;
-   cout << "1. Print list" << endl;
-   cout << "2. Add elements to the list" << endl;
-   cout << "3. Delete element" << endl;
-   cout << "4. Find elements' positions" << endl;
-   cout << "5. Replace element" << endl;
-   cout << "6. Sort elements" << endl;
-   cout << "7. End the program" << endl;
-   int ch;
-   cin >> ch;
-   switch(ch)
+   string flag_exit = "no";
+   while ((flag_exit != "y") && (flag_exit != "yes") && (flag_exit != "Yes") && (flag_exit != "YES"))
       {
-      case 1:
-      current = list.first;
-      if(current != nullptr)
-      print_list(current);
-      else
-      cout << "The list is empty" << endl;
-      current = nullptr;
-      break;
-      case 2:
-      add_elements(list);
-      break;
-      case 3:
-      delete_element(list);
-      break;
-      case 4:
-      find_pozitions(list);
-      break;
-      case 5:
-      replace_element(list);
-      break;
-      case 6:
-      sort_elements(list);
-      break;
-      case 7:
-      cout << "Do you want to leave program?" << endl;
-      cin >> flag_exit;
-      break;
+      cout << endl;
+      cout << "Select one of the operations:" << endl;
+      cout << "1. Print list" << endl;
+      cout << "2. Add elements to the list" << endl;
+      cout << "3. Delete element" << endl;
+      cout << "4. Find elements' positions" << endl;
+      cout << "5. Replace element" << endl;
+      cout << "6. Sort elements" << endl;
+      cout << "7. End the program" << endl;
+      int ch;
+      cin >> ch;
+      switch(ch)
+         {
+         case 1:
+         current = list.first;
+         if(current != nullptr)
+         print_list(current);
+         else
+         cout << "The list is empty" << endl;
+         current = nullptr;
+         break;
+         case 2:
+         add_elements(list);
+         break;
+         case 3:
+         delete_element(list);
+         break;
+         case 4:
+         find_pozitions(list);
+         break;
+         case 5:
+         replace_element(list);
+         break;
+         case 6:
+         sort_elements(list);
+         break;
+         case 7:
+         cout << "Do you want to leave program?" << endl;
+         cin >> flag_exit;
+         break;
+         }
       }
    }
-cout << "Good bye!" << endl;
-}
 }

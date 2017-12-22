@@ -7,8 +7,8 @@ using namespace std;
 
 struct Node
 {
- int znachenie;
- Node *next;
+int znachenie;
+Node *next;
 };
 
 struct List

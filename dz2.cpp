@@ -63,7 +63,7 @@ for (int i = 0; i < new_elements.length(); i++)
       znachenie = 0;
       }
    if (i == new_elements.length() - 1)
-   input(list,znachenie)
+   input(list,znachenie);
    }
 }
 
